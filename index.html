@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array manipulator</title>
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(wallpaper.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            width: 500px;
+            height: 300px;
+            background: gold;
+            display: flex;
+            align-items: left;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 50px;
+            border-radius: 10px;
+        }
+
+        #cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            position: absolute;
+            border: 4px dotted rgb(231, 28, 28);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 0px 20px blue;
+            pointer-events: none;
+        }
+
+        #array1,
+        #array2 {
+            font-size: 24px;
+            color: rgb(63, 14, 240);
+            font-weight: 800;
+        }
+
+        .container:hover~#cursor {
+            width: 60px;
+            height: 60px;
+            border: 3px solid red;
+        }
+
+        .container:hover {
+            background-color: rgb(84, 243, 222);
+            box-shadow: 0px 0px 20px black;
+        }
+
+        #array1:hover {
+            color: red;
+        }
+
+        #array2:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <p id="array1"></p>
+        <p id="array2"></p>
+    </div>
+    <div id="cursor"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>
